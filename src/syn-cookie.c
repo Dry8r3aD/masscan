@@ -34,6 +34,7 @@ get_entropy(void)
         entropy[1] <<= 1;
         entropy[1] |= entropy[0]>>63;
         entropy[0] <<= 1;
+		fclose(fp);
     }
 
     entropy[0] ^= time(0);
